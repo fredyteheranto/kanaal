@@ -7,7 +7,7 @@
       "name": "MIT"
     }
   },
-  "host": "Kanaal.swagger.io",
+  "host": "Kanaal.app.io",
   "basePath": "/v1",
   "schemes": [
     "http"
@@ -168,7 +168,7 @@
     "/servicios/{servicioId}": {
       "get": {
         "summary": "Info for a specific servicio",
-        "operationId": "showPetById",
+        "operationId": "servicioById",
         "tags": [
           "servicios"
         ],
@@ -257,7 +257,7 @@
     "/ciudades/{ciudadId}": {
       "get": {
         "summary": "Info for a specific ciudad",
-        "operationId": "showPetById",
+        "operationId": "ciudadId",
         "tags": [
           "ciudades"
         ],
@@ -346,7 +346,7 @@
     "/cientes/{clienteId}": {
       "get": {
         "summary": "Info for a specific cliente",
-        "operationId": "showPetById",
+        "operationId": "clienteId",
         "tags": [
           "cientes"
         ],
@@ -435,7 +435,7 @@
     "/tiposidentificaciones/{tipoidentificacionId}": {
       "get": {
         "summary": "Info for a specific tipoidentificacion",
-        "operationId": "showPetById",
+        "operationId": "tipoidentificacionId",
         "tags": [
           "tiposidentificaciones"
         ],
@@ -524,7 +524,7 @@
     "/tipodocumentos/{tipodocumentoId}": {
       "get": {
         "summary": "Info for a specific tipodocumento",
-        "operationId": "showPetById",
+        "operationId": "tipodocumentoId",
         "tags": [
           "tipodocumentos"
         ],
@@ -613,7 +613,7 @@
     "/personas/{personaId}": {
       "get": {
         "summary": "Info for a specific persona",
-        "operationId": "showPetById",
+        "operationId": "personaId",
         "tags": [
           "personas"
         ],
@@ -702,7 +702,7 @@
     "/vehiculos/{vehiculoId}": {
       "get": {
         "summary": "Info for a specific vehiculo",
-        "operationId": "showPetById",
+        "operationId": "vehiculoId",
         "tags": [
           "vehiculos"
         ],
@@ -791,7 +791,7 @@
     "/mensajeros/{mensajeId}": {
       "get": {
         "summary": "Info for a specific mensaje",
-        "operationId": "showPetById",
+        "operationId": "mensajeId",
         "tags": [
           "mensajeros"
         ],
@@ -880,7 +880,7 @@
     "/referencias/{referenciaId}": {
       "get": {
         "summary": "Info for a specific referencia",
-        "operationId": "showPetById",
+        "operationId": "referenciaId",
         "tags": [
           "referencias"
         ],
@@ -969,7 +969,7 @@
     "/evidenciasdocumentos/{evidenciadocumentoId}": {
       "get": {
         "summary": "Info for a specific evidenciadocumento",
-        "operationId": "showPetById",
+        "operationId": "evidenciadocumentoId",
         "tags": [
           "evidenciasdocumentos"
         ],
@@ -1058,7 +1058,7 @@
     "/entidades/{entidadId}": {
       "get": {
         "summary": "Info for a specific entidad",
-        "operationId": "showPetById",
+        "operationId": "entidadId",
         "tags": [
           "entidades"
         ],
@@ -1147,7 +1147,7 @@
     "/tiposreferencias/{tiposreferenciaId}": {
       "get": {
         "summary": "Info for a specific tiposreferencia",
-        "operationId": "showPetById",
+        "operationId": "tiposreferenciaId",
         "tags": [
           "tiposreferencias"
         ],
@@ -1236,7 +1236,7 @@
     "/tiposparentescos/{tipoparentescoId}": {
       "get": {
         "summary": "Info for a specific tipoparentesco",
-        "operationId": "showPetById",
+        "operationId": "tipoparentescoId",
         "tags": [
           "tiposparentescos"
         ],
@@ -1265,7 +1265,6 @@
         }
       }
     },
-
     "/mediospagos": {
       "get": {
         "summary": "List all mediospagos",
@@ -1326,7 +1325,7 @@
     "/mediospagos/{mediopagoId}": {
       "get": {
         "summary": "Info for a specific mediopago",
-        "operationId": "showPetById",
+        "operationId": "mediopagoId",
         "tags": [
           "mediospagos"
         ],
@@ -1403,8 +1402,7 @@
       "items": {
         "$ref": "#/definitions/Tipoparentesco"
       }
-    }
-    ,
+    },
     "Tiposreferencia": {
       "required": [
         "id"
@@ -1430,8 +1428,7 @@
     },
     "Entidad": {
       "required": [
-        "id",
-       
+        "id"
       ],
       "properties": {
         "id": {
@@ -1457,7 +1454,7 @@
     },
     "Evidenciadocumento": {
       "required": [
-        "id",
+        "id"
       ],
       "properties": {
         "id": {
@@ -1588,8 +1585,7 @@
     },
     "Persona": {
       "required": [
-        "id",
-        
+        "id"
       ],
       "properties": {
         "id": {
@@ -1642,8 +1638,7 @@
     },
     "Tipodocumento": {
       "required": [
-        "id",
-        
+        "id"
       ],
       "properties": {
         "id": {
@@ -1666,8 +1661,8 @@
     },
     "Tipoidentificacion": {
       "required": [
-        "id",
-       ],
+        "id"
+      ],
       "properties": {
         "id": {
           "type": "integer",
@@ -1678,8 +1673,7 @@
         },
         "abreviacion": {
           "type": "string"
-        }
-        ,
+        },
         "estado": {
           "type": "string"
         }
