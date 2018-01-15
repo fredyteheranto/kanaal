@@ -2,12 +2,12 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "Swagger Kanaal",
+    "title": "Swagger Petstore",
     "license": {
       "name": "MIT"
     }
   },
-  "host": "kanaal.swagger.io",
+  "host": "petstore.swagger.io",
   "basePath": "/v1",
   "schemes": [
     "http"
@@ -22,7 +22,7 @@
     "/tipospaquetes": {
       "get": {
         "summary": "List all tipospaquetes",
-        "operationId": "listTiposPaquetes",
+        "operationId": "listTipospaquetes",
         "tags": [
           "tipospaquetes"
         ],
@@ -46,7 +46,7 @@
               }
             },
             "schema": {
-              "$ref": "#/definitions/TiposPaquetes"
+              "$ref": "#/definitions/Tipospaquetes"
             }
           },
           "default": {
@@ -58,8 +58,8 @@
         }
       },
       "post": {
-        "summary": "Create a tipospaquetes",
-        "operationId": "createTiposPaquetes",
+        "summary": "Create a tipopaquete",
+        "operationId": "createTipospaquetes",
         "tags": [
           "tipospaquetes"
         ],
@@ -76,19 +76,19 @@
         }
       }
     },
-    "/tipospaquetes/{tipospaquetesId}": {
+    "/tipospaquetes/{tipopaqueteId}": {
       "get": {
-        "summary": "Info for a specific tipospaquetes",
+        "summary": "Info for a specific tipopaquete",
         "operationId": "showPetById",
         "tags": [
           "tipospaquetes"
         ],
         "parameters": [
           {
-            "name": "tipospaquetesId",
+            "name": "tipopaqueteId",
             "in": "path",
             "required": true,
-            "description": "The id of the tipospaquetes to retrieve",
+            "description": "The id of the tipopaquete to retrieve",
             "type": "string"
           }
         ],
@@ -96,7 +96,7 @@
           "200": {
             "description": "Expected response to a valid request",
             "schema": {
-              "$ref": "#/definitions/TiposPaquetes"
+              "$ref": "#/definitions/Tipospaquetes"
             }
           },
           "default": {
@@ -236,7 +236,7 @@
         }
       },
       "post": {
-        "summary": "Create a ciudades",
+        "summary": "Create a ciudad",
         "operationId": "createCiudades",
         "tags": [
           "ciudades"
@@ -254,19 +254,19 @@
         }
       }
     },
-    "/ciudades/{ciudadesId}": {
+    "/ciudades/{ciudadId}": {
       "get": {
-        "summary": "Info for a specific ciudades",
+        "summary": "Info for a specific ciudad",
         "operationId": "showPetById",
         "tags": [
           "ciudades"
         ],
         "parameters": [
           {
-            "name": "ciudadesId",
+            "name": "ciudadId",
             "in": "path",
             "required": true,
-            "description": "The id of the ciudades to retrieve",
+            "description": "The id of the ciudad to retrieve",
             "type": "string"
           }
         ],
@@ -286,12 +286,12 @@
         }
       }
     },
-    "/clientes": {
+    "/cientes": {
       "get": {
-        "summary": "List all clientes",
-        "operationId": "listClientes",
+        "summary": "List all cientes",
+        "operationId": "listCientes",
         "tags": [
-          "clientes"
+          "cientes"
         ],
         "parameters": [
           {
@@ -305,7 +305,7 @@
         ],
         "responses": {
           "200": {
-            "description": "An paged array of clientes",
+            "description": "An paged array of cientes",
             "headers": {
               "x-next": {
                 "type": "string",
@@ -313,7 +313,7 @@
               }
             },
             "schema": {
-              "$ref": "#/definitions/Clientes"
+              "$ref": "#/definitions/Cientes"
             }
           },
           "default": {
@@ -325,10 +325,10 @@
         }
       },
       "post": {
-        "summary": "Create a clientes",
-        "operationId": "createClientes",
+        "summary": "Create a cliente",
+        "operationId": "createCientes",
         "tags": [
-          "clientes"
+          "cientes"
         ],
         "responses": {
           "201": {
@@ -343,19 +343,19 @@
         }
       }
     },
-    "/clientes/{clientesId}": {
+    "/cientes/{clienteId}": {
       "get": {
-        "summary": "Info for a specific clientes",
+        "summary": "Info for a specific cliente",
         "operationId": "showPetById",
         "tags": [
-          "clientes"
+          "cientes"
         ],
         "parameters": [
           {
-            "name": "clientesId",
+            "name": "clienteId",
             "in": "path",
             "required": true,
-            "description": "The id of the clientes to retrieve",
+            "description": "The id of the cliente to retrieve",
             "type": "string"
           }
         ],
@@ -363,7 +363,7 @@
           "200": {
             "description": "Expected response to a valid request",
             "schema": {
-              "$ref": "#/definitions/Clientes"
+              "$ref": "#/definitions/Cientes"
             }
           },
           "default": {
@@ -378,7 +378,7 @@
     "/tiposidentificaciones": {
       "get": {
         "summary": "List all tiposidentificaciones",
-        "operationId": "listTiposIdentificaciones",
+        "operationId": "listTiposidentificaciones",
         "tags": [
           "tiposidentificaciones"
         ],
@@ -402,7 +402,7 @@
               }
             },
             "schema": {
-              "$ref": "#/definitions/TiposIdentificaciones"
+              "$ref": "#/definitions/Tiposidentificaciones"
             }
           },
           "default": {
@@ -414,8 +414,8 @@
         }
       },
       "post": {
-        "summary": "Create a tiposidentificacion",
-        "operationId": "createTiposIdentificaciones",
+        "summary": "Create a tipoidentificacion",
+        "operationId": "createTiposidentificaciones",
         "tags": [
           "tiposidentificaciones"
         ],
@@ -432,19 +432,19 @@
         }
       }
     },
-    "/tiposidentificaciones/{tiposidentificacionId}": {
+    "/tiposidentificaciones/{tipoidentificacionId}": {
       "get": {
-        "summary": "Info for a specific tiposidentificacion",
+        "summary": "Info for a specific tipoidentificacion",
         "operationId": "showPetById",
         "tags": [
           "tiposidentificaciones"
         ],
         "parameters": [
           {
-            "name": "tiposidentificacionId",
+            "name": "tipoidentificacionId",
             "in": "path",
             "required": true,
-            "description": "The id of the tiposidentificacion to retrieve",
+            "description": "The id of the tipoidentificacion to retrieve",
             "type": "string"
           }
         ],
@@ -452,7 +452,96 @@
           "200": {
             "description": "Expected response to a valid request",
             "schema": {
-              "$ref": "#/definitions/TiposIdentificaciones"
+              "$ref": "#/definitions/Tiposidentificaciones"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/tipodocumentos": {
+      "get": {
+        "summary": "List all tipodocumentos",
+        "operationId": "listTipodocumentos",
+        "tags": [
+          "tipodocumentos"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of tipodocumentos",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Tipodocumentos"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a tipodocumento",
+        "operationId": "createTipodocumentos",
+        "tags": [
+          "tipodocumentos"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/tipodocumentos/{tipodocumentoId}": {
+      "get": {
+        "summary": "Info for a specific tipodocumento",
+        "operationId": "showPetById",
+        "tags": [
+          "tipodocumentos"
+        ],
+        "parameters": [
+          {
+            "name": "tipodocumentoId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the tipodocumento to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Tipodocumentos"
             }
           },
           "default": {
@@ -642,95 +731,6 @@
         }
       }
     },
-    "/evidenciadocumentos": {
-      "get": {
-        "summary": "List all evidenciadocumentos",
-        "operationId": "listEvidenciaDocumentos",
-        "tags": [
-          "evidenciadocumentos"
-        ],
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "How many items to return at one time (max 100)",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "An paged array of evidenciadocumentos",
-            "headers": {
-              "x-next": {
-                "type": "string",
-                "description": "A link to the next page of responses"
-              }
-            },
-            "schema": {
-              "$ref": "#/definitions/EvidenciaDocumentos"
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
-            }
-          }
-        }
-      },
-      "post": {
-        "summary": "Create a evidenciadocumento",
-        "operationId": "createEvidenciaDocumentos",
-        "tags": [
-          "evidenciadocumentos"
-        ],
-        "responses": {
-          "201": {
-            "description": "Null response"
-          },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
-            }
-          }
-        }
-      }
-    },
-    "/evidenciadocumentos/{evidenciadocumentoId}": {
-      "get": {
-        "summary": "Info for a specific evidenciadocumento",
-        "operationId": "showPetById",
-        "tags": [
-          "evidenciadocumentos"
-        ],
-        "parameters": [
-          {
-            "name": "evidenciadocumentoId",
-            "in": "path",
-            "required": true,
-            "description": "The id of the evidenciadocumento to retrieve",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Expected response to a valid request",
-            "schema": {
-              "$ref": "#/definitions/EvidenciaDocumentos"
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
-            }
-          }
-        }
-      }
-    },
     "/mensajeros": {
       "get": {
         "summary": "List all mensajeros",
@@ -770,7 +770,7 @@
         }
       },
       "post": {
-        "summary": "Create a mensajero",
+        "summary": "Create a mensaje",
         "operationId": "createMensajeros",
         "tags": [
           "mensajeros"
@@ -788,19 +788,19 @@
         }
       }
     },
-    "/mensajeros/{mensajeroId}": {
+    "/mensajeros/{mensajeId}": {
       "get": {
-        "summary": "Info for a specific mensajero",
+        "summary": "Info for a specific mensaje",
         "operationId": "showPetById",
         "tags": [
           "mensajeros"
         ],
         "parameters": [
           {
-            "name": "mensajeroId",
+            "name": "mensajeId",
             "in": "path",
             "required": true,
-            "description": "The id of the mensajero to retrieve",
+            "description": "The id of the mensaje to retrieve",
             "type": "string"
           }
         ],
@@ -909,7 +909,96 @@
         }
       }
     },
-    "/entidades": {
+    "/evidenciasdocumentos": {
+      "get": {
+        "summary": "List all evidenciasdocumentos",
+        "operationId": "listPets",
+        "tags": [
+          "evidenciasdocumentos"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of evidenciasdocumentos",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Pets"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a evidenciadocumento",
+        "operationId": "createPets",
+        "tags": [
+          "evidenciasdocumentos"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/evidenciasdocumentos/{evidenciadocumentoId}": {
+      "get": {
+        "summary": "Info for a specific evidenciadocumento",
+        "operationId": "showPetById",
+        "tags": [
+          "evidenciasdocumentos"
+        ],
+        "parameters": [
+          {
+            "name": "evidenciadocumentoId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the evidenciadocumento to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Pets"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+        "/entidades": {
       "get": {
         "summary": "List all entidades",
         "operationId": "listEntidades",
@@ -998,12 +1087,12 @@
         }
       }
     },
-    "/tiporeferencias": {
+    "/tiposreferencias": {
       "get": {
-        "summary": "List all tiporeferencias",
-        "operationId": "listTipoReferencias",
+        "summary": "List all tiposreferencias",
+        "operationId": "listTiposreferencias",
         "tags": [
-          "tiporeferencias"
+          "tiposreferencias"
         ],
         "parameters": [
           {
@@ -1017,7 +1106,7 @@
         ],
         "responses": {
           "200": {
-            "description": "An paged array of tiporeferencias",
+            "description": "An paged array of tiposreferencias",
             "headers": {
               "x-next": {
                 "type": "string",
@@ -1025,7 +1114,7 @@
               }
             },
             "schema": {
-              "$ref": "#/definitions/TipoReferencias"
+              "$ref": "#/definitions/Tiposreferencias"
             }
           },
           "default": {
@@ -1037,10 +1126,10 @@
         }
       },
       "post": {
-        "summary": "Create a tiporeferencia",
-        "operationId": "createTipoReferencias",
+        "summary": "Create a tiposreferencia",
+        "operationId": "createTiposreferencias",
         "tags": [
-          "tiporeferencias"
+          "tiposreferencias"
         ],
         "responses": {
           "201": {
@@ -1055,19 +1144,19 @@
         }
       }
     },
-    "/tiporeferencias/{tiporeferenciaId}": {
+    "/tiposreferencias/{tiposreferenciaId}": {
       "get": {
-        "summary": "Info for a specific tiporeferencia",
+        "summary": "Info for a specific tiposreferencia",
         "operationId": "showPetById",
         "tags": [
-          "tiporeferencias"
+          "tiposreferencias"
         ],
         "parameters": [
           {
-            "name": "tiporeferenciaId",
+            "name": "tiposreferenciaId",
             "in": "path",
             "required": true,
-            "description": "The id of the tiporeferencia to retrieve",
+            "description": "The id of the tiposreferencia to retrieve",
             "type": "string"
           }
         ],
@@ -1075,7 +1164,7 @@
           "200": {
             "description": "Expected response to a valid request",
             "schema": {
-              "$ref": "#/definitions/TipoReferencias"
+              "$ref": "#/definitions/Tiposreferencias"
             }
           },
           "default": {
@@ -1087,10 +1176,100 @@
         }
       }
     },
+    "/tiposparentescos": {
+      "get": {
+        "summary": "List all tiposparentescos",
+        "operationId": "listTiposparentescos",
+        "tags": [
+          "tiposparentescos"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of tiposparentescos",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Tiposparentescos"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a tipoparentesco",
+        "operationId": "createTiposparentescos",
+        "tags": [
+          "tiposparentescos"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/tiposparentescos/{tipoparentescoId}": {
+      "get": {
+        "summary": "Info for a specific tipoparentesco",
+        "operationId": "showPetById",
+        "tags": [
+          "tiposparentescos"
+        ],
+        "parameters": [
+          {
+            "name": "tipoparentescoId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the tipoparentesco to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Tiposparentescos"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+
     "/mediospagos": {
       "get": {
         "summary": "List all mediospagos",
-        "operationId": "listMediosPagos",
+        "operationId": "listMediospagos",
         "tags": [
           "mediospagos"
         ],
@@ -1114,7 +1293,7 @@
               }
             },
             "schema": {
-              "$ref": "#/definitions/MediosPagos"
+              "$ref": "#/definitions/Mediospagos"
             }
           },
           "default": {
@@ -1127,7 +1306,7 @@
       },
       "post": {
         "summary": "Create a mediopago",
-        "operationId": "createMediosPagos",
+        "operationId": "createMediospagos",
         "tags": [
           "mediospagos"
         ],
@@ -1164,7 +1343,7 @@
           "200": {
             "description": "Expected response to a valid request",
             "schema": {
-              "$ref": "#/definitions/MediosPagos"
+              "$ref": "#/definitions/Mediospagos"
             }
           },
           "default": {
@@ -1178,7 +1357,7 @@
     }
   },
   "definitions": {
-    "tipospaquetes": {
+    "Mediopago": {
       "required": [
         "id",
         "name"
@@ -1188,20 +1367,479 @@
           "type": "integer",
           "format": "int64"
         },
-        "name": {
+        "descripcion": {
           "type": "string"
         },
-        "tag": {
+        "estado": {
           "type": "string"
         }
       }
     },
-    "TiposPaquetes": {
+    "Mediospagos": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/tipospaquetes"
+        "$ref": "#/definitions/Mediopago"
+      }
+    },
+    "Tipoparentesco": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Tiposparentescos": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Tipoparentesco"
       }
     }
+    ,
+    "Tiposreferencia": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Tiposreferencias": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Tiposreferencia"
+      }
+    },
+    "Entidad": {
+      "required": [
+        "id",
+       
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "nit": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Entidades": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Entidad"
+      }
+    },
+    "Evidenciadocumento": {
+      "required": [
+        "id",
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "id_persona": {
+          "type": "string"
+        },
+        "id_tipodocumento": {
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "numero_documento": {
+          "type": "string"
+        },
+        "id_identidad": {
+          "type": "string"
+        },
+        "fecha_vencimiento": {
+          "type": "string"
+        },
+        "categoria": {
+          "type": "string"
+        },
+        "observacion": {
+          "type": "string"
+        },
+        "url_foto": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Evidenciasdocumentos": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Evidenciadocumento"
+      }
+    },
+    "Referencia": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "id_tipo_referencia": {
+          "type": "string"
+        },
+        "id_mensajero": {
+          "type": "string"
+        },
+        "id_persona": {
+          "type": "string"
+        },
+        "id_tipo_parentesco": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Referencias": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Referencia"
+      }
+    },
+    "Mensajero": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "id_persona": {
+          "type": "string"
+        },
+        "id_vehiculo": {
+          "type": "string"
+        },
+        "id_mediopago": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Mensajeros": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Mensajero"
+      }
+    },
+    "Vehiculo": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Vehiculos": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Vehiculo"
+      }
+    },
+    "Persona": {
+      "required": [
+        "id",
+        
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "id_tipodeindentificacion": {
+          "type": "string"
+        },
+        "identificacion": {
+          "type": "string"
+        },
+        "nombres": {
+          "type": "string"
+        },
+        "apellido1": {
+          "type": "string"
+        },
+        "id_ciudad": {
+          "type": "string"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "codigo_postal": {
+          "type": "string"
+        },
+        "apellido2": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        },
+        "foto_url": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Personas": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Persona"
+      }
+    },
+    "Tipodocumento": {
+      "required": [
+        "id",
+        
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Tipodocumentos": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Tipodocumento"
+      }
+    },
+    "Tipoidentificacion": {
+      "required": [
+        "id",
+       ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "abreviacion": {
+          "type": "string"
+        }
+        ,
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Tiposidentificaciones": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Tipoidentificacion"
+      }
+    },
+    "Cliente": {
+      "required": [
+        "id"
+
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "id_persona": {
+          "type": "string"
+        },
+        "fecha_registro": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Clientes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Cliente"
+      }
+    },
+    "Ciudad": {
+      "required": [
+        "id",
+        "nombre",
+        "estado"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Ciudades": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Ciudad"
+      }
+    },
+    "Servicio": {
+      "required": [
+        "id",
+        "id_clientes",
+        "id_tipopaquete",
+        "dimensiones",
+        "peso",
+        "contenido",
+        "valorpaquete",
+        "estado",
+        "urlfoto",
+        "id_vehiculo",
+        "direccionorigen",
+        "id_ciudadorigen",
+        "direcciondestino",
+        "id_ciudaddestino",
+        "detinatario"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "id_clientes": {
+          "type": "string"
+        },
+        "id_tipopaquete": {
+          "type": "string"
+        },
+        "dimensiones": {
+          "type": "string"
+        },
+        "peso": {
+          "type": "string"
+        },
+        "contenido": {
+          "type": "string"
+        },
+        "valorpaquete": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        },
+        "urlfoto": {
+          "type": "string"
+        },
+        "id_vehiculo": {
+          "type": "string"
+        },
+        "direccionorigen": {
+          "type": "string"
+        },
+        "id_ciudadorigen": {
+          "type": "string"
+        },
+        "direcciondestino": {
+          "type": "string"
+        },
+        "id_ciudaddestino": {
+          "type": "string"
+        },
+        "detinatario": {
+          "type": "string"
+        }
+      }
+    },
+    "Servicios": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Servicio"
+      }
+    },
+    "Tipopaquetes": {
+      "required": [
+        "id",
+        "descripcion",
+        "estado"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Tipospaquetes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Tipopaquetes"
+      }
     },
     "Error": {
       "required": [
@@ -1219,3 +1857,4 @@
       }
     }
   }
+}
