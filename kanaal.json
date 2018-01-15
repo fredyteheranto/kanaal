@@ -2,12 +2,12 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "Swagger Petstore",
+    "title": "Kanaal",
     "license": {
       "name": "MIT"
     }
   },
-  "host": "petstore.swagger.io",
+  "host": "Kanaal.swagger.io",
   "basePath": "/v1",
   "schemes": [
     "http"
