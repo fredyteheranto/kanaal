@@ -313,7 +313,7 @@
               }
             },
             "schema": {
-              "$ref": "#/definitions/Cientes"
+              "$ref": "#/definitions/Clientes"
             }
           },
           "default": {
@@ -363,7 +363,7 @@
           "200": {
             "description": "Expected response to a valid request",
             "schema": {
-              "$ref": "#/definitions/Cientes"
+              "$ref": "#/definitions/Clientes"
             }
           },
           "default": {
