@@ -912,7 +912,7 @@
     "/evidenciasdocumentos": {
       "get": {
         "summary": "List all evidenciasdocumentos",
-        "operationId": "listPets",
+        "operationId": "listEvidenciasdocumentos",
         "tags": [
           "evidenciasdocumentos"
         ],
@@ -936,7 +936,7 @@
               }
             },
             "schema": {
-              "$ref": "#/definitions/Pets"
+              "$ref": "#/definitions/Evidenciasdocumentos"
             }
           },
           "default": {
@@ -949,7 +949,7 @@
       },
       "post": {
         "summary": "Create a evidenciadocumento",
-        "operationId": "createPets",
+        "operationId": "createEvidenciasdocumentos",
         "tags": [
           "evidenciasdocumentos"
         ],
@@ -986,7 +986,7 @@
           "200": {
             "description": "Expected response to a valid request",
             "schema": {
-              "$ref": "#/definitions/Pets"
+              "$ref": "#/definitions/Evidenciasdocumentos"
             }
           },
           "default": {
@@ -998,7 +998,7 @@
         }
       }
     },
-        "/entidades": {
+    "/entidades": {
       "get": {
         "summary": "List all entidades",
         "operationId": "listEntidades",
@@ -1694,7 +1694,6 @@
     "Cliente": {
       "required": [
         "id"
-
       ],
       "properties": {
         "id": {
