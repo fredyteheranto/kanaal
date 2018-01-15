@@ -1,0 +1,1367 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Swagger Kanaal",
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "host": "kanaal.swagger.io",
+  "basePath": "/v1",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/tipospaquetes": {
+      "get": {
+        "summary": "List all tipospaquetes",
+        "operationId": "listTiposPaquetes",
+        "tags": [
+          "tipospaquetes"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of tipospaquetes",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/TiposPaquetes"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a tipospaquetes",
+        "operationId": "createTiposPaquetes",
+        "tags": [
+          "tipospaquetes"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/tipospaquetes/{tipospaquetesId}": {
+      "get": {
+        "summary": "Info for a specific tipospaquetes",
+        "operationId": "showPetById",
+        "tags": [
+          "tipospaquetes"
+        ],
+        "parameters": [
+          {
+            "name": "tipospaquetesId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the tipospaquetes to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/TiposPaquetes"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+      "/servicios": {
+      "get": {
+        "summary": "List all servicios",
+        "operationId": "listServicios",
+        "tags": [
+          "servicios"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of servicios",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Servicios"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a servicio",
+        "operationId": "createServicios",
+        "tags": [
+          "servicios"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/servicios/{servicioId}": {
+      "get": {
+        "summary": "Info for a specific servicio",
+        "operationId": "showPetById",
+        "tags": [
+          "servicios"
+        ],
+        "parameters": [
+          {
+            "name": "servicioId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the servicio to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Servicios"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/ciudades": {
+      "get": {
+        "summary": "List all ciudades",
+        "operationId": "listCiudades",
+        "tags": [
+          "ciudades"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of ciudades",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Ciudades"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a ciudades",
+        "operationId": "createCiudades",
+        "tags": [
+          "ciudades"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/ciudades/{ciudadesId}": {
+      "get": {
+        "summary": "Info for a specific ciudades",
+        "operationId": "showPetById",
+        "tags": [
+          "ciudades"
+        ],
+        "parameters": [
+          {
+            "name": "ciudadesId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the ciudades to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Ciudades"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/clientes": {
+      "get": {
+        "summary": "List all clientes",
+        "operationId": "listClientes",
+        "tags": [
+          "clientes"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of clientes",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Clientes"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a clientes",
+        "operationId": "createClientes",
+        "tags": [
+          "clientes"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/clientes/{clientesId}": {
+      "get": {
+        "summary": "Info for a specific clientes",
+        "operationId": "showPetById",
+        "tags": [
+          "clientes"
+        ],
+        "parameters": [
+          {
+            "name": "clientesId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the clientes to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Clientes"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/tiposidentificaciones": {
+      "get": {
+        "summary": "List all tiposidentificaciones",
+        "operationId": "listTiposIdentificaciones",
+        "tags": [
+          "tiposidentificaciones"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of tiposidentificaciones",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/TiposIdentificaciones"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a tiposidentificacion",
+        "operationId": "createTiposIdentificaciones",
+        "tags": [
+          "tiposidentificaciones"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/tiposidentificaciones/{tiposidentificacionId}": {
+      "get": {
+        "summary": "Info for a specific tiposidentificacion",
+        "operationId": "showPetById",
+        "tags": [
+          "tiposidentificaciones"
+        ],
+        "parameters": [
+          {
+            "name": "tiposidentificacionId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the tiposidentificacion to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/TiposIdentificaciones"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/personas": {
+      "get": {
+        "summary": "List all personas",
+        "operationId": "listPersonas",
+        "tags": [
+          "personas"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of personas",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Personas"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a persona",
+        "operationId": "createPersonas",
+        "tags": [
+          "personas"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/personas/{personaId}": {
+      "get": {
+        "summary": "Info for a specific persona",
+        "operationId": "showPetById",
+        "tags": [
+          "personas"
+        ],
+        "parameters": [
+          {
+            "name": "personaId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the persona to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Personas"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehiculos": {
+      "get": {
+        "summary": "List all vehiculos",
+        "operationId": "listVehiculos",
+        "tags": [
+          "vehiculos"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of vehiculos",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Vehiculos"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a vehiculo",
+        "operationId": "createVehiculos",
+        "tags": [
+          "vehiculos"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehiculos/{vehiculoId}": {
+      "get": {
+        "summary": "Info for a specific vehiculo",
+        "operationId": "showPetById",
+        "tags": [
+          "vehiculos"
+        ],
+        "parameters": [
+          {
+            "name": "vehiculoId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the vehiculo to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Vehiculos"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/evidenciadocumentos": {
+      "get": {
+        "summary": "List all evidenciadocumentos",
+        "operationId": "listEvidenciaDocumentos",
+        "tags": [
+          "evidenciadocumentos"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of evidenciadocumentos",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/EvidenciaDocumentos"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a evidenciadocumento",
+        "operationId": "createEvidenciaDocumentos",
+        "tags": [
+          "evidenciadocumentos"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/evidenciadocumentos/{evidenciadocumentoId}": {
+      "get": {
+        "summary": "Info for a specific evidenciadocumento",
+        "operationId": "showPetById",
+        "tags": [
+          "evidenciadocumentos"
+        ],
+        "parameters": [
+          {
+            "name": "evidenciadocumentoId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the evidenciadocumento to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/EvidenciaDocumentos"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/mensajeros": {
+      "get": {
+        "summary": "List all mensajeros",
+        "operationId": "listMensajeros",
+        "tags": [
+          "mensajeros"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of mensajeros",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Mensajeros"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a mensajero",
+        "operationId": "createMensajeros",
+        "tags": [
+          "mensajeros"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/mensajeros/{mensajeroId}": {
+      "get": {
+        "summary": "Info for a specific mensajero",
+        "operationId": "showPetById",
+        "tags": [
+          "mensajeros"
+        ],
+        "parameters": [
+          {
+            "name": "mensajeroId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the mensajero to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Mensajeros"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/referencias": {
+      "get": {
+        "summary": "List all referencias",
+        "operationId": "listReferencias",
+        "tags": [
+          "referencias"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of referencias",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Referencias"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a referencia",
+        "operationId": "createReferencias",
+        "tags": [
+          "referencias"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/referencias/{referenciaId}": {
+      "get": {
+        "summary": "Info for a specific referencia",
+        "operationId": "showPetById",
+        "tags": [
+          "referencias"
+        ],
+        "parameters": [
+          {
+            "name": "referenciaId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the referencia to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Referencias"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/entidades": {
+      "get": {
+        "summary": "List all entidades",
+        "operationId": "listEntidades",
+        "tags": [
+          "entidades"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of entidades",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Entidades"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a entidad",
+        "operationId": "createEntidades",
+        "tags": [
+          "entidades"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/entidades/{entidadId}": {
+      "get": {
+        "summary": "Info for a specific entidad",
+        "operationId": "showPetById",
+        "tags": [
+          "entidades"
+        ],
+        "parameters": [
+          {
+            "name": "entidadId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the entidad to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Entidades"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/tiporeferencias": {
+      "get": {
+        "summary": "List all tiporeferencias",
+        "operationId": "listTipoReferencias",
+        "tags": [
+          "tiporeferencias"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of tiporeferencias",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/TipoReferencias"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a tiporeferencia",
+        "operationId": "createTipoReferencias",
+        "tags": [
+          "tiporeferencias"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/tiporeferencias/{tiporeferenciaId}": {
+      "get": {
+        "summary": "Info for a specific tiporeferencia",
+        "operationId": "showPetById",
+        "tags": [
+          "tiporeferencias"
+        ],
+        "parameters": [
+          {
+            "name": "tiporeferenciaId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the tiporeferencia to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/TipoReferencias"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/mediospagos": {
+      "get": {
+        "summary": "List all mediospagos",
+        "operationId": "listMediosPagos",
+        "tags": [
+          "mediospagos"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of mediospagos",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/MediosPagos"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a mediopago",
+        "operationId": "createMediosPagos",
+        "tags": [
+          "mediospagos"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/mediospagos/{mediopagoId}": {
+      "get": {
+        "summary": "Info for a specific mediopago",
+        "operationId": "showPetById",
+        "tags": [
+          "mediospagos"
+        ],
+        "parameters": [
+          {
+            "name": "mediopagoId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the mediopago to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/MediosPagos"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/pets": {
+      "get": {
+        "summary": "List all pets",
+        "operationId": "listPets",
+        "tags": [
+          "pets"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of pets",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Pets"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a pet",
+        "operationId": "createPets",
+        "tags": [
+          "pets"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/pets": {
+      "get": {
+        "summary": "List all pets",
+        "operationId": "listPets",
+        "tags": [
+          "pets"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An paged array of pets",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Pets"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a pet",
+        "operationId": "createPets",
+        "tags": [
+          "pets"
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/pets/{petId}": {
+      "get": {
+        "summary": "Info for a specific pet",
+        "operationId": "showPetById",
+        "tags": [
+          "pets"
+        ],
+        "parameters": [
+          {
+            "name": "petId",
+            "in": "path",
+            "required": true,
+            "description": "The id of the pet to retrieve",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/Pets"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Pet": {
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        }
+      }
+    },
+    "Pets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Pet"
+      }
+    },
+    "Error": {
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
